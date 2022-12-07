@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Time } from './Time';
-  import { numberToString } from './numberToString';
+  import { Time } from './model/Time';
+  import { numberToString } from './converters/numberToString';
   import MainCounterValue from './MainCounterValue.svelte';
   import ProgressCircle from './ProgressCircle.svelte';
 
@@ -11,7 +11,6 @@
     animation = `blur-bounce ${animationTime / 1000}s normal forwards ease-out`;
     setTimeout(() => {
       animation = ''
-      // keep this value the same as animation time in css section
     }, animationTime);
   }
 
@@ -58,15 +57,12 @@
 
 
 <style lang="scss">
-    @import '../variables';
-	$large-font: 74px;
+    @import '../../variables';
 	.timer-wrapper {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		position: relative;
-
-
 	}
 
 	.timer {
@@ -81,7 +77,7 @@
 		background: radial-gradient(88.67% 967.47% at 2.04% 7.88%, #6595BD 0%, #74B2B0 100%);
 		box-shadow: 0 5px 12px 5px rgba(21, 21, 21, 0.25);
 		border-radius: 15px;
-		padding: 50px;
+		padding: 3.125rem 10rem;
 	}
 
 	.timer-shadow {
@@ -92,7 +88,6 @@
 		position: absolute;
 		top: 0;
 		background: radial-gradient(88.67% 967.47% at 2.04% 7.88%, #6595BD 0%, #74B2B0 100%);
-
 	}
 
 	.separator {
@@ -112,6 +107,10 @@
 		position: absolute;
 		left: calc(100% - 15px);
 		top: 7px;
+
+        @media (max-width: $sm-breakpoint) {
+            top: 2px;
+		}
 	}
 
 	@keyframes -global-blur-bounce {

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Round } from './Round';
+  import { Round } from './model/Round';
   import { slide } from 'svelte/transition';
 
   export let rounds: Round[] = [];
@@ -40,7 +40,8 @@
 
 <style lang="scss">
     .container{
-		width: 250px;
+		width: 100%;
+        max-width: 250px;
     }
 
     ol {
@@ -51,8 +52,7 @@
         display: flex;
         align-items: flex-start;
 		list-style-type: none;
-		padding-top: 7px;
-		padding-bottom: 7px;
+		padding: 0.5rem 0;
         border-bottom: 1px solid #4f4f4f;
 
         &:last-child {
@@ -68,11 +68,11 @@
         display: block;
         text-align: center;
         flex: 0 0 50%;
-		font-size: 18px;
+		font-size: 1.125rem;
     }
 
     .header {
-		font-size: 22px;
+		font-size: 1.375rem;
 		font-weight: 500;
     }
 
@@ -80,7 +80,7 @@
         margin: auto;
 		background-color: transparent;
         color: white;
-		font-size: 14px;
+		font-size: 0.875rem;
         padding: 5px;
         text-transform: uppercase;
         cursor: pointer;

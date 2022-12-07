@@ -14,6 +14,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   background: #181D23;
+  min-width: 400px;
+
+  @media (max-width: $sm-breakpoint) {
+    font-size: 70%;
+  }
 }
 
 * {
@@ -25,16 +30,8 @@
   box-sizing: border-box;
 }
 
-html {
-  min-width: 580px;
-}
-
-body{
-}
-
 .page-container {
   width: 100%;
-  min-height: 100vh;
   padding: $page-padding;
   background: #181D23;
   //background: radial-gradient(47.86% 50% at 50% 50%, #212830 0%, #181D23 100%);

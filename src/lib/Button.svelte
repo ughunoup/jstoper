@@ -8,8 +8,9 @@
 
 
 <style lang="scss">
+    @import '../variables';
 	button {
-		padding: 10px 20px;
+		padding: 0.625rem 1.25rem;
 		margin: 20px 10px;
 		position: relative;
 		box-shadow: 0 5px 12px 5px rgba(21, 21, 21, 0.25);
@@ -22,6 +23,12 @@
 		transform: perspective(1px) translateZ(0);
 		backface-visibility: hidden;
         transition: background-color 0.2s;
+
+        @media (max-width: $sm-breakpoint) {
+			padding: 0.325rem 1.25rem;
+            border-radius: 7px;
+			margin: 20px 7px;
+		}
 
 		&.primary {
 			background: rgba(101, 149, 189, 1);

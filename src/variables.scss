@@ -4,5 +4,11 @@ $page-padding: 30px;
 
 // COUNTER
 $main-counter-width: 643px;
-$main-counter-height: 185px;
-$large-font: 74px;
+$main-counter-height: 11.5625rem;
+$large-font: 4.625rem;
+$sm-large-font: 50px;
+
+
+// BREAKPOINTS
+$counter-width-breakpoint: $main-counter-width + $page-padding*2;
+$sm-breakpoint: 520px;

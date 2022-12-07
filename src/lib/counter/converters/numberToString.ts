@@ -1,4 +1,4 @@
-import type { FormatOption } from './Time';
+import type { FormatOption } from '../model/Time';
 
 export function numberToString(value: number, format: FormatOption): string {
   const valueString = `${value}`;

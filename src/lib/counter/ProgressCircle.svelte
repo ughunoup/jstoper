@@ -21,7 +21,7 @@
 <style lang="scss">
 	.radial-progress {
 		height: auto;
-		width: 20px;
+		width: 1.25rem;
 		transform: rotate(-90deg);
 
 		circle {

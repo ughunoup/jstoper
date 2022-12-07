@@ -1,9 +1,9 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
-  import { Time } from './Time';
-  import { TimeRange } from './TimeRange';
-  import { Round } from './Round';
-  import Button from './Button.svelte';
+  import { Time } from './model/Time';
+  import { TimeRange } from './model/TimeRange';
+  import { Round } from './model/Round';
+  import Button from '../Button.svelte';
   import TimeRangeList from './TimeRangeList.svelte';
   import { onDestroy } from 'svelte';
   import MainScreen from './MainScreen.svelte';
@@ -24,8 +24,6 @@
   } else {
     rounds = [new Round()]
   }
-
-
 
   $: multipleRounds = rounds.length > 1;
   $: currentRange = rounds[rounds.length - 1];
@@ -135,7 +133,7 @@
 </div>
 
 <style lang="scss">
-	@import '../variables';
+	@import '../../variables';
 
 	.container {
 		width: 100%;
@@ -154,9 +152,8 @@
 		width: $main-counter-width;
 		height: $main-counter-height;
 
-		@media (max-width: $main-counter-width + $page-padding*2) {
+		@media (max-width: $counter-width-breakpoint) {
 			width: 100%;
-			//height: calc($main-counter-height / $main-counter-width * 100%);
 		}
 	}
 
@@ -167,7 +164,7 @@
 	}
 
 	.summary-time {
-		font-size: 30px;
+		font-size: 1.875rem;
 		text-align: right;
 
 		font-weight: 100;
@@ -176,7 +173,7 @@
 		position: absolute;
 		bottom: 100%;
 		right: 0;
-		padding-bottom: 15px;
+		padding-bottom: 1rem;
 		z-index: 2;
 
 	}

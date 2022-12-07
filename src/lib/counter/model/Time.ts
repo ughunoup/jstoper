@@ -1,5 +1,11 @@
-import type { TimeViewModel } from '../model/TimeViewModel';
-import { numberToString } from './numberToString';
+import { numberToString } from '../converters/numberToString';
+
+interface TimeViewModel {
+  hours: number;
+  minutes: number;
+  seconds: number;
+  milliseconds: number;
+}
 
 const HOURS_DIVIDER = 1000 * 60 * 60;
 const MINUTES_DIVIDER = 1000 * 60;

@@ -14,7 +14,7 @@
 </div>
 
 <style lang="scss">
-	@import '../variables';
+	@import '../../variables';
 
 	.number-container{
 		position: relative;
@@ -36,9 +36,13 @@
         transform: translateX(-50%);
 
 		font-weight: 400;
-		font-size: 13px;
+		font-size: 0.8125rem;
         letter-spacing: 1px;
 		text-transform: uppercase;
+
+        @media (max-width: $sm-breakpoint) {
+            line-height: 1;
+        }
 
 	}
 </style>
