@@ -1,0 +1,45 @@
+@import './variables';
+
+:root {
+  font-family: 'Heebo', Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background: #181D23;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 580px;
+}
+
+body{
+}
+
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: $page-padding;
+  background: #181D23;
+  //background: radial-gradient(47.86% 50% at 50% 50%, #212830 0%, #181D23 100%);
+}
+
+
+
+
