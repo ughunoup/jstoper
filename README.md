@@ -1,6 +1,6 @@
 # JStoper
 
-[DEMO](jstoper.surge.sh)
+[DEMO](http://jstoper.surge.sh)
 
 ## Development
 ```sh
