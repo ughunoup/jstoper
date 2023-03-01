@@ -29,9 +29,8 @@ describe('Counter', () => {
   it('should increase the counter after clicking start', async () => {
     await fireEvent.click(screen.getByText('Start'))
 
-    await act(() => {
-      vi.advanceTimersByTime(5200);
-    })
+    await act(() => vi.advanceTimersByTime(5200));
+
     const [minutes, seconds] = timerValues();
     const s = parseInt(seconds);
     expect(s).toEqual(5);

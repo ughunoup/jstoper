@@ -18,7 +18,7 @@
   let rounds: Round[];
   const storageKey = 'timer';
 
-  if(localStorage.getItem(storageKey)) {
+  if (localStorage.getItem(storageKey)) {
     const items = JSON.parse(localStorage.getItem(storageKey));
     rounds = items.map((i) => Round.fromObject(i));
   } else {
@@ -89,7 +89,7 @@
     clearInterval(interval);
   });
 
-  if(JSON.parse(localStorage.getItem('running'))) {
+  if (JSON.parse(localStorage.getItem('running'))) {
     startRefreshing();
   }
 </script>
@@ -102,7 +102,7 @@
     <div class="content">
         {#if multipleRounds}
             <div class="summary-time" data-testid="summary-time" transition:fade>
-               {summary.toString()}
+                {summary.toString()}
             </div>
         {/if}
         <MainScreen time={currentRange.timeSummary}></MainScreen>
